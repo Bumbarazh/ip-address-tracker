@@ -1,0 +1,39 @@
+#header {
+  background: url("../../../assets/images/pattern-bg.png") no-repeat;
+}
+
+#head-content {
+  font-weight: 500;
+  line-height: 30px;
+  color: #fff;
+}
+
+@media screen and (max-width: 375px){
+  #header {
+    height: 300px;
+    padding: 26px 24px 0;
+  }
+
+  #head-content {
+    font-size: 26px;
+    letter-spacing: -0.232143px;
+    text-align: center;
+    margin: 0 0 29px;
+  }
+}
+
+@media screen and (min-width: 376px){
+  #header {
+    height: 300px;
+    padding: 33px 0 0;
+  }
+
+  #head-content {
+    font-size: 32px;
+    letter-spacing: -0.285714px;
+    text-align: center;
+    margin: 0 0 31px;
+  }
+}
+
+
