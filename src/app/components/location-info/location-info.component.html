@@ -1,1 +1,18 @@
-<p>location-info works!</p>
+<article id="location-info">
+  <div class="main-info">
+    <p class="small-head">IP Address</p>
+    <p class="locs">{{coords.ip}}</p>
+  </div>
+  <div class="main-info">
+    <p class="small-head">Location</p>
+    <p class="locs">{{coords.location.city}}</p>
+  </div>
+  <div class="main-info">
+    <p class="small-head">Timezone</p>
+    <p class="locs">UTC {{coords.location.timezone}}</p>
+  </div>
+  <div class="main-info">
+    <p class="small-head">ISP</p>
+    <p class="locs">{{coords.isp}}</p>
+  </div>
+</article>

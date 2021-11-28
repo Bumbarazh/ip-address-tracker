@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {UserLocation} from "../../models/location";
 
 @Component({
   selector: 'app-location-info',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./location-info.component.css']
 })
 export class LocationInfoComponent implements OnInit {
+  @Input()
+  coords!: UserLocation;
 
   constructor() { }
 
