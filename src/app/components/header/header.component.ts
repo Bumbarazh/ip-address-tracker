@@ -1,17 +1,16 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
-import { SearchComponent } from "../search/search.component";
+import {UserLocation} from "../../models/location";
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+  @Input()
+  coords!: UserLocation;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

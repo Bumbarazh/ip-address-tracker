@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-import { HeaderComponent } from '../header/header.component';
+import {SearchLocationByIpService} from "../../services/search-location-by-ip.service";
+import {UserLocation} from "../../models/location";
 
 @Component({
   selector: 'app-home',
@@ -8,8 +8,13 @@ import { HeaderComponent } from '../header/header.component';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  coords!: UserLocation;
 
-  constructor() { }
+  constructor(private searchLocByIpService: SearchLocationByIpService) {
+    this.searchLocByIpService.getLocationOfUser().subscribe(loc => {
+      this.coords = loc;
+    })
+  }
 
   ngOnInit(): void {
   }
