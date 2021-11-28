@@ -1,4 +1,9 @@
-<form>
-  <input id="text-input" type="text" placeholder="Search for any IP address or domain">
+<form #searchForm="ngForm" (ngSubmit)=onSubmit(searchForm)>
+  <input
+    id="text-input"
+    type="text"
+    placeholder="Search for any IP address or domain"
+    name="coords"
+    ngModel>
   <input id="button" type="submit">
 </form>
