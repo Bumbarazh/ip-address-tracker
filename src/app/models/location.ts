@@ -1,5 +1,5 @@
 export interface UserLocation {
-  ip: string,
+  ip?: string,
   location: {
     country: string,
     region: string,
@@ -10,7 +10,7 @@ export interface UserLocation {
     timezone: string,
     geonameId: number
   },
-  domains: [string],
+  domains: Array<string>,
   as: {
     asn: number,
     name: string,

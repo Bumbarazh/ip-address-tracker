@@ -8,6 +8,7 @@ import { SearchComponent } from './components/search/search.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { LocationInfoComponent } from './components/location-info/location-info.component';
+import { MapComponent } from './components/map/map.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LocationInfoComponent } from './components/location-info/location-info.
     HomeComponent,
     HeaderComponent,
     SearchComponent,
-    LocationInfoComponent
+    LocationInfoComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,

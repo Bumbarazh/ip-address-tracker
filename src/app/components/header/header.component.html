@@ -1,5 +1,6 @@
 <main id="header">
   <h1 id="head-content">IP Address Tracker</h1>
-  <app-search></app-search>
+  <app-search (ip)="getCoords($event)"></app-search>
   <app-location-info [coords]="coords"></app-location-info>
+  <app-map [coords]="coords"></app-map>
 </main>

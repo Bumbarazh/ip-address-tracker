@@ -1,6 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {NgForm} from "@angular/forms";
-import {SearchLocationByIpService} from "../../services/search-location-by-ip.service";
 
 @Component({
   selector: 'app-search',
@@ -8,14 +7,14 @@ import {SearchLocationByIpService} from "../../services/search-location-by-ip.se
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  @Output() ip = new EventEmitter<string>();
 
-  constructor(private searchLocByIpService: SearchLocationByIpService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
   onSubmit(form: NgForm):void {
-    this.searchLocByIpService.getLocationOfUser(form.value.ip)
+    this.ip.emit(form.value.ip);
   }
-
 }
