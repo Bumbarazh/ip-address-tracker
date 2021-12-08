@@ -1,4 +1,8 @@
-import {Component, AfterViewInit, Input} from '@angular/core';
+import {
+  Component,
+  AfterViewInit,
+  Input
+} from '@angular/core';
 
 // @ts-ignore
 import * as L from "leaflet";
@@ -26,8 +30,7 @@ export class MapComponent implements AfterViewInit {
   private map: any;
 
   private initMap(): void {
-    console.log(this.coords)
-    this.map = L.map('map', {
+    this.map = L.map(`map`, {
       center: [ this.coords.location.lat,  this.coords.location.lng ],
       zoom: 16
     });
@@ -40,7 +43,7 @@ export class MapComponent implements AfterViewInit {
     tiles.addTo(this.map);
   }
 
-  constructor() { }
+  constructor() {}
 
   ngAfterViewInit(): void {
     this.initMap();

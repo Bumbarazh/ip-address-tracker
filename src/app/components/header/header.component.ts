@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 
 import {UserLocation} from "../../models/location";
 import {SearchLocationByIpService} from "../../services/search-location-by-ip.service";
