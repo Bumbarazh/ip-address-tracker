@@ -26,3 +26,5 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - [Angular](https://angular.io/) - JS library
+- [LeafletJS](https://leafletjs.com/) - JS Library
+- [Ipify](https://www.ipify.org/) - Public IP Address API
